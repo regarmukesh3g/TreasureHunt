@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Treasure Hunt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url({{ url_for('static',filename='images/bg.png')}});background-repeat: no-repeat;background-size: cover;">
+<div class="container">
+<div class="form-group">
+<h1 class="container">Treasure Hunt</h1>
+<form class="form-inline" action='/quiz' method='POST'>
+    <ol>
+                <input type='hidden' value='0' name='qnum' />{{j}}
+    </ol>
+    <input class="form-control" type="submit" value="Start" />
+</form>
+</div>
+</div>
+<!--Thanks for coming to the source,
+Mukesh-->
+</body>
+</html>

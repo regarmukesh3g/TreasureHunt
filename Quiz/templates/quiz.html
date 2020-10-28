@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Treasure Hunt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url({{ url_for('static',filename='images/bg.png')}});background-repeat: no-repeat;background-size: cover;">
+
+<div class="container">
+{% for warn in w %}
+    <h2>{{warn}}</h2>
+{% endfor %}
+<div class="form-group">
+    <h3>Question. {{num}} / {{m}}</h3>
+<form action='/quiz' method='POST' class="form-inline">
+
+           <input type = 'hidden' value='{{num}}' name="qnum"/>
+            <img src="{{q}}" class="card-img mb-2 mr-sm-2"/>
+            <div class="card-text">
+                <input class="form-control mb-2 mr-sm-2" type="text" name="ans"/>
+            </div>
+    <br/>
+
+    <input class="form-control" type="submit" value="submit" />
+</form>
+</div>
+</div>
+<!--Thanks for coming to the source,
+Mukesh-->
+</body>
+</html>
